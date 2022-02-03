@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 const CssReset = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
-    direction: rtl;
   }
 
   html, body, div, span, applet, object, iframe,
@@ -24,6 +23,9 @@ const CssReset = createGlobalStyle`
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+  }
+  html, body {
+    background-color: ${({ theme }) => theme.colors.gray};
   }
 
   /* HTML5 display-role reset for older browsers */

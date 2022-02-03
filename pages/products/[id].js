@@ -1,10 +1,27 @@
 // * node_modules
-import mainHttp from "../../config/axios";
 import React from "react";
 
+// * Config
+import mainHttp from "../../config/axios";
+
+// * Components
+import ProductCard from "components/ProductCard";
+
+// * Component
 const Product = ({ productData }) => {
-  console.log(productData);
-  return <h1>Product</h1>;
+  const { title, category, description, id, image, price, rating } =
+    productData;
+  return (
+    <ProductCard
+      key={id}
+      title={title}
+      rate={rating}
+      category={category}
+      description={description}
+      image={image}
+      price={price}
+    />
+  );
 };
 
 // * Server Side Request
@@ -13,6 +30,7 @@ export const getServerSideProps = async (context) => {
   const productData = await mainHttp
     .get(`/products/${productId}`)
     .then((response) => response?.data);
+  console.log(productData);
   return {
     props: {
       productData,

@@ -17,7 +17,7 @@ const getAxiosRequestConfig = () => {
       "Content-Type": "application/json",
       "X-Client": "web",
     },
-    timeout: 10000,
+    timeout: 20000,
     maxRedirects: 0,
   };
 

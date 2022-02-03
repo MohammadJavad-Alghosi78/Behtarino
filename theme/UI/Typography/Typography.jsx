@@ -5,9 +5,14 @@ import React from "react";
 import { TypographyRoot } from "./style";
 
 // * Component
-const Typography = ({ variant, color, children }) => {
+const Typography = ({ variant, color, isItalic, className, children }) => {
   return (
-    <TypographyRoot variant={variant} color={color}>
+    <TypographyRoot
+      className={className}
+      variant={variant}
+      color={color}
+      isItalic={isItalic}
+    >
       {children}
     </TypographyRoot>
   );
