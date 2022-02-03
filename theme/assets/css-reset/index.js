@@ -4,7 +4,6 @@ const CssReset = createGlobalStyle`
   *, *:before, *:after {
     box-sizing: border-box;
     direction: rtl;
-    font-family: ${({ theme }) => theme?.fonts.primary};
   }
 
   html, body, div, span, applet, object, iframe,

@@ -2,7 +2,8 @@ import mainHttp from "../config/axios";
 import Head from "next/head";
 import React from "react";
 import styles from "../styles/Home.module.css";
-import { Test } from "./style";
+import Image from "next/image";
+import { Button, Typography } from "theme/UI";
 
 export default function Home() {
   React.useEffect(() => {
@@ -10,7 +11,9 @@ export default function Home() {
   }, []);
   return (
     <div className={styles.container}>
-      <Test>test</Test>
+      <Typography variant="title" color="red">
+        PLEASE GO TO "/PRODUCTS/NUMBER" ROUTE
+      </Typography>
     </div>
   );
 }
