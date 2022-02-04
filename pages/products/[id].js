@@ -30,7 +30,6 @@ export const getServerSideProps = async (context) => {
   const productData = await mainHttp
     .get(`/products/${productId}`)
     .then((response) => response?.data);
-  console.log(productData);
   return {
     props: {
       productData,

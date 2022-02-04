@@ -13,6 +13,7 @@ import {
   DetailsWrapper,
   Header,
   DescriptionWrapper,
+  Footer,
 } from "./style";
 import colors from "theme/assets/colors";
 
@@ -21,7 +22,7 @@ const ProductCard = ({ title, rate, category, description, image, price }) => {
   return (
     <Card>
       <ImageWRapper>
-        <img src={image} alt={title} width={200} height={200} />
+        <Image src={image} alt={title} width={200} height={200} />
       </ImageWRapper>
       <DetailsWrapper>
         <Header>
@@ -52,6 +53,19 @@ const ProductCard = ({ title, rate, category, description, image, price }) => {
             {description}
           </Typography>
         </DescriptionWrapper>
+        <Footer>
+          <Button variant="primary" textColor="white">
+            <Image
+              src="/svg/shopping_cart_black_24dp.svg"
+              alt="basket icon"
+              width={16}
+              height={16}
+            />
+            <Typography variant="medium" color="white" className="ml-8">
+              ADD TO BASKET
+            </Typography>
+          </Button>
+        </Footer>
       </DetailsWrapper>
     </Card>
   );

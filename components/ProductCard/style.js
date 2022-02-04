@@ -15,6 +15,9 @@ export const ImageWRapper = styled.div`
   background-color: #35d366;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const DetailsWrapper = styled.div`
@@ -35,4 +38,9 @@ export const DescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 64px;
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  margin-top: 32px;
 `;
